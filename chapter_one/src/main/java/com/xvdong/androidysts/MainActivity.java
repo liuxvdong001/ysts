@@ -1,12 +1,17 @@
 package com.xvdong.androidysts;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+
+/**
+ * Activity的生命周期问题
+ */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,48 +21,48 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.e(TAG, "onCreate: " );
+        Log.d(TAG, "onCreate: " );
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        Log.e(TAG, "onSaveInstanceState: ");
+        Log.d(TAG, "onSaveInstanceState: ");
         super.onSaveInstanceState(outState, outPersistentState);
     }
 
     @Override
     protected void onStart() {
-        Log.e(TAG, "onStart: ");
+        Log.d(TAG, "onStart: ");
         super.onStart();
     }
 
     @Override
     protected void onRestart() {
-        Log.e(TAG, "onRestart: ");
+        Log.d(TAG, "onRestart: ");
         super.onRestart();
     }
 
     @Override
     protected void onResume() {
-        Log.e(TAG, "onResume: ");
+        Log.d(TAG, "onResume: ");
         super.onResume();
     }
 
     @Override
     protected void onPause() {
-        Log.e(TAG, "onPause: ");
+        Log.d(TAG, "onPause: ");
         super.onPause();
     }
 
     @Override
     protected void onStop() {
-        Log.e(TAG, "onStop: ");
+        Log.d(TAG, "onStop: ");
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
-        Log.e(TAG, "onDestroy: ");
+        Log.d(TAG, "onDestroy: ");
         super.onDestroy();
     }
 
@@ -73,5 +78,9 @@ public class MainActivity extends AppCompatActivity {
         });
         builder.setCancelable(true);
         builder.show();
+    }
+
+    public void startActivity(View view) {
+        startActivity(new Intent(this,SecondActivity.class));
     }
 }

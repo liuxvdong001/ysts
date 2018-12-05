@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tv_guolin_view"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="郭霖的Android事件分发机制"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
     <com.xvdong.shpater_three.TouchTextView
         android:id="@+id/tv_hello"
         android:layout_width="match_parent"
@@ -29,18 +37,18 @@
         android:orientation="horizontal">
 
         <com.xvdong.shpater_three.DispatchTouchTextView
-            android:clickable="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary" />
+            android:background="@color/colorPrimary"
+            android:clickable="true" />
 
         <com.xvdong.shpater_three.DispatchTouchTextView
-            android:clickable="false"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark" />
+            android:background="@color/colorPrimaryDark"
+            android:clickable="false" />
 
     </com.xvdong.shpater_three.DispatchTouchLinearLayout>
 

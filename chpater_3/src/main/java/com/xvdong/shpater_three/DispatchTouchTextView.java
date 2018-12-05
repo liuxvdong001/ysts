@@ -28,6 +28,7 @@ public class DispatchTouchTextView extends AppCompatTextView {
      */
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
+        event.actionToString(event.getAction());
         Log.i(TAG, "dispatchTouchEvent: ");
         return true;
 //        return false;

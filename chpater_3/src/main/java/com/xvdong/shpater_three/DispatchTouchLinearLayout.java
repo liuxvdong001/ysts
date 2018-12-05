@@ -13,9 +13,6 @@ import android.widget.LinearLayout;
 public class DispatchTouchLinearLayout extends LinearLayout {
 
     private final String TAG = this.getClass().getSimpleName();
-    private final int RETURN_FALSE = 1;
-    private final int RETURN_TRUE = 2;
-    private final int RETURN_SUPER = 3;
 
     public DispatchTouchLinearLayout(Context context) {
         super(context);
